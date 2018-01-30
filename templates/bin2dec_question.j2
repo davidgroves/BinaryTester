@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversion Problem</title>
+</head>
+<body>
+
+<form>
+Please convert the following number from (unsigned) binary to decimal.
+
+<input type="hidden" name="question" value={{ question.value }}>
+<table>
+<tr>
+{%- for item in question.binarylist -%}
+    <td>{{ item }}</td>
+{%- endfor -%}
+</tr>
+</table>
+
+Answer: <input type="number", name="answer", min="0", max="256", autocomplete="off">
+<button type="submit" formaction="/bin2dec_answer.html">Submit Answer</button>
+</form>
+
+</body>
+</html>

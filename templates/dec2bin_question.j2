@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversion Problem</title>
+</head>
+<body>
+
+<form>
+<input type="hidden" name="question" value={{ question.value }}>
+Convert {{ question.value }} into unsigned binary.
+
+<table>
+<tr>
+{%- for item in header_values %}
+    <th align="left">{{ item }}</th>
+{%- endfor %}
+</tr>
+<tr>
+{%- for item in header_values -%}
+    <td align="left"><div style="text-align:center"><input type="text" name="{{ item }}" value="" size="1", align="middle", autocomplete="off", required /></div></td>
+{%- endfor -%}
+</tr>
+</table>
+<button type="submit" formaction="/dec2bin_answer.html">Submit Answer</button>
+
+</body>
+</html>

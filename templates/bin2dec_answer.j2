@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversion Problem - Answer</title>
+</head>
+<body>
+
+<form>
+{% if correct %}
+Well done, that was correct !
+{% else %}
+Sorry, {{ question.binarystring }} is {{ question.value }} in decimal :(
+{% endif %}
+
+<a href="bin2dec_question.html">Try another</a>
+
+</body>
+</html>

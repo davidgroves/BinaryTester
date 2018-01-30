@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Addition Problem</title>
+</head>
+<body>
+
+<form>
+    {% if question %}
+    <input type="hidden" name="a" value={{ a.value }}>
+    <input type="hidden" name="b" value={{ b.value }}>
+    <input type="hidden" name="bits" value={{ a.bits }}>
+    {% endif %}
+
+    <table>
+        <tr>
+        <th></th>
+        {%- for item in header_values %}
+            <th align="left">{{ item }}</th>
+        {%- endfor %}
+        </tr>
+        <tr>
+        <th></th>
+        {%- for item in a.binarylist %}
+            <td align="left">{{ item }}</td>
+        {%- endfor %}
+        </tr>
+        <tr>
+        <th>{{ symbol }}</th>
+        {%- for item in b.binarylist %}
+            <td align="left">{{ item }}</td>
+        {%- endfor %}
+        </tr>
+        <tr>
+        {%- if question %}
+            {% include 'add_question.j2' %}
+        {%- else %}
+            {% include 'add_answer.j2' %}
+        {%- endif %}
+</form>
+</body>
+</html>

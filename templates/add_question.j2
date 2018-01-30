@@ -1,0 +1,6 @@
+        <th>=</th>
+        {%- for item in header_values %}
+            <td align="left"><div style="text-align:center"><input type="text" name="{{ item }}" value="" size="1", align="middle", autocomplete="off", required /></div></td>
+        {%- endfor %}
+    </table>
+    <button type="submit" formaction="/add_answer.html">Submit Answer</button>

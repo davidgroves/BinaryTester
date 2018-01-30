@@ -1,0 +1,19 @@
+        <th>Given Answer</th>
+        {%- for item in given_answer.binarylist %}
+            <td align="left">{{ item }}</td>
+        {%- endfor %}
+        </tr>
+        <tr>
+        <th>Correct Answer</th>
+        {%- for item in correct_answer.binarylist %}
+            <td align="left">{{ item }}</td>
+        {%- endfor %}
+        <tr>
+    </table>
+    <button type="submit" formaction="/add_question.html">Another Question</button>
+    {% if correct == True %}
+    Well done !
+    {% endif %}
+    {% if correct == False %}
+    Sorry, that was wrong :(
+    {% endif %}
